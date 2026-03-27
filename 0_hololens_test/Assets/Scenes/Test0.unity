@@ -374,6 +374,9 @@ GameObject:
   - component: {fileID: 1439367337}
   - component: {fileID: 1439367340}
   - component: {fileID: 1439367339}
+  - component: {fileID: 1439367343}
+  - component: {fileID: 1439367342}
+  - component: {fileID: 1439367341}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -460,9 +463,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439367332}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.232, y: 0.749043, z: 2.91}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.02000001, y: 1.721, z: 4.7196054}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -727,6 +730,69 @@ MonoBehaviour:
   proximityType: -1
   executionOrder: 0
   constraintTransform: {fileID: 1006103039}
+--- !u!114 &1439367341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439367332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ff6e588d8c6044fa35cc81710a727b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1439367342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439367332}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8a10bdd6850674590a7d931a87adb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateLinkedTransform: 0
+  moveLerpTime: 0.1
+  rotateLerpTime: 0.1
+  scaleLerpTime: 0
+  maintainScaleOnInitialization: 1
+  smoothing: 1
+  lifetime: 0
+  referenceDirection: 1
+  minDistance: 1
+  maxDistance: 2
+  minViewDegrees: 0
+  maxViewDegrees: 30
+  aspectV: 1
+  ignoreAngleClamp: 0
+  ignoreDistanceClamp: 0
+  useFixedVerticalPosition: 0
+  fixedVerticalPosition: -0.4
+  orientToReferenceDirection: 0
+--- !u!114 &1439367343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439367332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3986155c7a728454f8bbbabd2e274601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftInteractor: {fileID: 0}
+  rightInteractor: {fileID: 0}
+  trackedTargetType: 0
+  trackedHandedness: 3
+  trackedHandJoint: 0
+  transformOverride: {fileID: 0}
+  additionalOffset: {x: 0, y: 0, z: 0}
+  additionalRotation: {x: 0, y: 0, z: 0}
+  updateSolvers: 1
 --- !u!135 &35736791708923113
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -780,7 +846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &132924445858688907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,7 +1692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &699930954172770089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3336,7 +3402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f34ba1bd80a7c3408576849ece8c425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionManager: {fileID: 0}
+  interactionManager: {fileID: 661277893805774671}
   modeOnDetection:
     name: Near
     priority: 2
@@ -7974,6 +8040,7 @@ GameObject:
   - component: {fileID: 3093294087916979977}
   - component: {fileID: 2918458020530860200}
   - component: {fileID: 3476366541020894771}
+  - component: {fileID: 6817295207838880154}
   m_Layer: 0
   m_Name: GrabInteractor
   m_TagString: Untagged
@@ -7981,6 +8048,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!135 &6817295207838880154
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6817295207838880153}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6841386316880488647
 GameObject:
   m_ObjectHideFlags: 0
@@ -8666,6 +8754,7 @@ GameObject:
   - component: {fileID: 1282609523440144713}
   - component: {fileID: 1873826756200035814}
   - component: {fileID: 6530421434623161652}
+  - component: {fileID: 7765502891543509273}
   m_Layer: 0
   m_Name: GrabInteractor
   m_TagString: Untagged
@@ -8673,6 +8762,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!135 &7765502891543509273
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7765502891543509272}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7773682709665225130
 GameObject:
   m_ObjectHideFlags: 0
@@ -9250,7 +9360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f34ba1bd80a7c3408576849ece8c425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionManager: {fileID: 0}
+  interactionManager: {fileID: 661277893805774671}
   modeOnDetection:
     name: Near
     priority: 2
@@ -9751,7 +9861,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1084714366}
   - {fileID: 8490679915535867614}
-  - {fileID: 1439367336}
   - {fileID: 1135872628}
   - {fileID: 1006103039}
   - {fileID: 312255929}
+  - {fileID: 1439367336}
